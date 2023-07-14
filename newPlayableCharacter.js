@@ -26,3 +26,33 @@ function newPlayableCharacter(x, y) {
         element: element
     }
 }
+
+
+// function test(){
+//     sleep(5000)
+//         .then(() => console.log('Hello World'))
+
+// }
+// test()
+
+
+function sleep(time) {
+    return new Promise(resolve => {
+        setTimeout(resolve, time)
+    })
+}
+
+async function test() {
+    await sleep(5000)
+    console.log('Hello World')
+}
+
+test()
+
+/*
+1.Make it asynchronous using the async keyword.
+2.Make it accept time as a parameter.
+3.At the end of the function, invoke sleep and pass it time as an argument.
+4.Use await to pause walkEast until sleep (time) has resolved.
+5.After sleep has resolved, invoke stop to stop the character.
+*/
